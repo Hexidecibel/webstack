@@ -15,7 +15,7 @@
           </compilerPlugins>
           <jvmTarget>1.8</jvmTarget>
           <pluginOptions>
-            <option>all-open:annotation=com.nthalk.webstack.web.annotations.Open</option>
+            <option>all-open:annotation=com.tipgiv.web.annotations.Open</option>
           </pluginOptions>
         </configuration>
         <dependencies>
@@ -62,7 +62,7 @@
             </generate>
             <target>
               <directory>${project.basedir}/gen/java</directory>
-              <packageName>com.nthalk.webstack.db.models</packageName>
+              <packageName>com.tipgiv.webstack.db.models</packageName>
             </target>
           </generator>
           <jdbc>

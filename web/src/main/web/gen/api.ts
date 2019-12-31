@@ -35,11 +35,11 @@ export class TestApiClient {
     }
 
     /**
-     * HTTP POST /api/test
-     * Java method: com.nthalk.webstack.web.api.TestApi.ping
+     * HTTP POST /test/ping
+     * Java method: com.tipgiv.web.api.TestApi.ping
      */
     ping(): RestResponse<ApiResult<Pong>> {
-        return this.httpClient.request({ method: "POST", url: uriEncoding`api/test` });
+        return this.httpClient.request({ method: "POST", url: uriEncoding`test/ping` });
     }
 }
 

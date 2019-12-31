@@ -10,6 +10,9 @@ This is a starter project for using spring-boot, postgres, jooq, jooq-models, sp
     # Ensure clean build
     mvn clean install
     
+    # Reset DB
+    ./vm exec ./db-reset
+    
     # Dev Tab:
     ./dbcli migrate         # <= Run this when you update migrations
     ./dbcli --help          # <= Print dbcli help

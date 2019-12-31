@@ -15,7 +15,7 @@
           </compilerPlugins>
           <jvmTarget>1.8</jvmTarget>
           <pluginOptions>
-            <option>all-open:annotation=com.nthalk.webstack.web.annotations.Open</option>
+            <option>all-open:annotation=com.tipgiv.web.annotations.Open</option>
           </pluginOptions>
         </configuration>
         <dependencies>
@@ -53,7 +53,7 @@
         <artifactId>typescript-generator-maven-plugin</artifactId>
         <configuration>
           <classPatterns>
-            <classPattern>com.nthalk.webstack.web.api.**</classPattern>
+            <classPattern>com.tipgiv.web.api.**</classPattern>
           </classPatterns>
           <customTypeNamingFunction><![CDATA[
             function(name, simpleName) {
@@ -64,7 +64,7 @@
           <jsonLibrary>jackson2</jsonLibrary>
           <noFileComment>true</noFileComment>
           <optionalAnnotations>
-            <annotation>com.nthalk.webstack.web.annotations.Optional</annotation>
+            <annotation>com.tipgiv.web.annotations.Optional</annotation>
           </optionalAnnotations>
           <outputFile>${project.basedir}/src/main/web/gen/api.ts</outputFile>
           <outputFileType>implementationFile</outputFileType>
@@ -207,6 +207,11 @@
       <version>${spring-boot.version}</version>
     </dependency>
     <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+      <version>${spring-boot.version}</version>
+    </dependency>
+    <dependency>
       <artifactId>spring-security-oauth2-client</artifactId>
       <groupId>org.springframework.security</groupId>
       <version>${spring-security.version}</version>
@@ -263,6 +268,16 @@
       <artifactId>HikariCP</artifactId>
       <groupId>com.zaxxer</groupId>
       <version>${hikari-cp.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-jooq</artifactId>
+      <version>2.1.8.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-tx</artifactId>
+      <version>${spring-security.version}</version>
     </dependency>
   </dependencies>
   <modelVersion>4.0.0</modelVersion>
